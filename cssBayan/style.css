@@ -40,6 +40,7 @@
 }
 
 
+
 .bayan__title-wrapper {
     display: flex;
     justify-content: space-between;
@@ -51,9 +52,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     width: 1.5rem;
-    height: 1.5rem;        
-    transition: all .3s;
-
+    height: 1.5rem;
+    transition:  all .2s;
 }
 
 .bayan__item {
@@ -62,19 +62,17 @@
     border-top: 0.1rem solid rgb(214, 214, 214);
     text-decoration: none;
     transition: all .3s;
-
+    height: 100%;
 }
 
 
 .bayan__img {
-    display: block;
-    margin: 0 auto 3rem auto;
-
-}
-
-.bayan__container .bayan__img {
-
-    display: none;
+    /* display: block; */
+    visibility: hidden;
+    opacity: 0;
+    overflow:hidden;
+    height: 0.1rem;
+    transition: opacity .3s;   
 }
 
 
@@ -86,7 +84,11 @@
 
 .bayan__item .bayan__content:target .bayan__img {
     display: block;
-    
+    margin: 0 auto 2rem auto;
+    visibility: visible;
+    opacity: 1;
+    overflow:visible;
+    height: 100%;
 }
 
 
@@ -111,6 +113,11 @@
 
     .bayan__item:hover .bayan__img {
         display: block;
+        margin: 0 auto 2rem auto;
+        visibility: visible;
+    opacity: 1;
+    overflow:visible;
+    height: 100%;
         
     }
 
