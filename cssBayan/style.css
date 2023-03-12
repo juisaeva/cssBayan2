@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.body {
+    background-color: rgb(247, 240, 231);
+    font-family: 'Arial', sans-serif;
+    padding: 5rem;
+}
+
+.container {
+    width: 80rem;
+    margin: 0 auto;
+}
+
+.bayan__heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.bayan__container {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.bayan__container:hover {
+    cursor: pointer;
+}
+
+.bayan__container:hover .bayan__title {
+    color: black;
+}
+
+.bayan__title {
+    color: rgb(0, 26, 255);
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    display:block;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.bayan__title::after {
+    position: absolute;
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 0;
+    top: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.bayan__container:hover .bayan__title::after {
+    background-image: url('img/open.png');
+}
+
+
+.bayan__item {
+    position: relative;
+    padding: 2rem 0 0 0;
+    border-top: 0.1rem solid rgb(214, 214, 214);
+    text-decoration: none;
+}
+
+.bayan__img {
+    display: block;
+    margin: 0 auto 3rem auto;
+}
+
+.bayan__container .bayan__img {
+    display: none;
+}
+
+.bayan__item:hover .bayan__img {
+    display: block;
+}
+
+.bayan__item:hover .bayan__title::after {
+    background-image: url('img/close.png');
+}
+
+
+.bayan__item .bayan__content:target .bayan__title {
+    color: black;
+}
+.bayan__item .bayan__content:target .bayan__img {
+    display: block;
+}
+
+.bayan__item .bayan__content:target .bayan__title::after {
+    background-image: url('img/close.png');
+}
