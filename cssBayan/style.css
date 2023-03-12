@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 7px;
 }
 
 .body {
@@ -12,7 +12,7 @@
 }
 
 .container {
-    width: 80rem;
+    width: 35rem;
     margin: 0 auto;
 }
 
@@ -27,13 +27,6 @@
     list-style: none;
 }
 
-.bayan__container:hover {
-    cursor: pointer;
-}
-
-.bayan__container:hover .bayan__title {
-    color: black;
-}
 
 .bayan__title {
     color: rgb(0, 26, 255);
@@ -76,34 +69,82 @@
 }
 
 
-.bayan__item:hover .bayan__img {
-    display: block;
-}
-
-.bayan__container:hover .bayan__icon {
-    display: block;
-    background-image: url('img/open.png');
-}
-
-
-.bayan__item:hover .bayan__icon {
-    display: block;
-    background-image: url('img/close.png');
-}
-
-
 
 .bayan__item .bayan__content:target .bayan__title {
     color: black;
+
+    transition: all .2s;
 }
 
 .bayan__item .bayan__content:target .bayan__img {
     display: block;
+    transition: all .2s;
 }
 
 
 .bayan__item .bayan__content:target .bayan__icon {
     display: block;
     background-image: url('img/close.png');
+    
+    transition: all .2s;
 }
 
+@media (hover: hover) {
+    /* when hover is supported */
+   
+    .bayan__container:hover {
+        cursor: pointer;
+    }
+
+    .bayan__container:hover .bayan__title {
+        color: black;
+    }
+
+    .bayan__item:hover .bayan__img {
+        display: block;
+        transition: all .2s;
+    }
+
+    .bayan__container:hover .bayan__icon {
+        display: block;
+        background-image: url('img/open.png');
+        transition: all .2s;
+    }
+
+
+    .bayan__item:hover .bayan__icon {
+        display: block;
+        background-image: url('img/close.png');
+        transition: all .2s;
+    }
+
+  }
+
+
+@media (min-width: 768px) {
+    * {
+        font-size: 10px;
+    }
+
+    .container {
+        width: 55rem;
+    }
+    
+    .bayan__img {
+        width: 30rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    * {
+        font-size: 12px;
+    }
+    .container {
+        width: 75rem;
+    }
+    
+    .bayan__img {
+        width: 42rem;
+    }
+}
